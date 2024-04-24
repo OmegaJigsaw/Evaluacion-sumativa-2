@@ -1,0 +1,106 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+html, body{
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*BARRA DE NAVEGACION*/
+nav{
+    position: sticky;
+    background-color: blue;
+    margin: 0;
+    padding: 0;
+    box-shadow: 10px 10px 10px #a3a2a2;
+}
+nav>ul{
+    margin: 0;
+    height: 3rem;
+    top: 1rem;
+    width: auto;
+}
+nav>ul>li{
+    display: inline-block;
+    margin-right: 20px;
+    padding-top: 10px;
+    height: 80%;
+    color: white;
+    border-right: 1px solid white;
+}
+nav>ul>li:hover{
+    padding-right: 20px;
+    color: aqua;
+    font-style: bold;
+    transition-duration: .4s;
+}
+/*Content*/
+.contenido{
+    position: relative;
+}
+h1{
+    color: blue;
+    text-align: center;
+}
+h1:hover{
+    transform: scale(1.5);
+    color: red;
+    transition: .1s;
+}
+/*Cards*/
+.card{
+    position: relative;
+    border: 1px solid blueviolet;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px #a3a2a2;
+}
+.card>.titulo{
+    color: white;
+    background-color: blueviolet;
+}
+.card>.cuerpo{
+    height: 6rem;
+    width: 20rem;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition-duration: .4s;
+    background-color: rgba(207, 139, 247, 0.658);
+    box-shadow: 10px 6px 10px #a3a2a2;
+}
+@media screen and (max-width: 650px){
+   nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 40%;
+    background-color: rgba(137, 43, 226, 0.836);
+    box-shadow: 6px 6px 20px blueviolet;
+    } 
+   nav>ul>li{
+    display: block;
+    margin-right: 5px;
+    padding-top: 10px;
+    height: 100%;
+    color: white;
+    border-bottom: 1px solid white;
+    border-right: none;
+    margin-left: -2rem;
+    }
+    nav>ul>li:hover{
+        color: rgb(227, 175, 255);
+    }
+    .card{
+        height: 100%;
+        width: 100%;
+        border-color: blue;
+    }
+    .card>.titulo{
+        background-color: blue;
+    }
+    .contenido{
+        position: absolute;
+        left: 20rem;
+    }
+}
